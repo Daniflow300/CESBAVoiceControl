@@ -1,4 +1,10 @@
-
 <resources>
     <string name="app_name">CESBA VoiceControl</string>
+    <string name="tagline">Asistente controlado por voz</string>
+    <string name="estado_inicial">Iniciando…</string>
+    <string name="btn_limpiar">LIMPIAR</string>
+    <string name="calc_titulo">CALCULADORA</string>
+    <string name="calc_hint_a">Primer número</string>
+    <string name="calc_hint_b">Segundo número</string>
+    <string name="calc_cerrar">CERRAR CALCULADORA</string>
 </resources>

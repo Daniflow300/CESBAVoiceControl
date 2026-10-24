@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="navy_dark">#0B1533</color>
+    <color name="navy">#182A57</color>
+    <color name="navy_light">#314B91</color>
+    <color name="gold">#F0B323</color>
+    <color name="gold_dark">#C98F0B</color>
+    <color name="white">#FFFFFF</color>
+    <color name="glass">#1FFFFFFF</color>
+    <color name="glass_stroke">#33FFFFFF</color>
+    <color name="danger">#E5484D</color>
+    <color name="danger_dark">#B02A30</color>
+    <color name="success">#3DD68C</color>
 </resources>

@@ -1,152 +1,274 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true"
-    android:background="#182A57">
+    android:orientation="vertical"
+    android:paddingStart="20dp"
+    android:paddingTop="36dp"
+    android:paddingEnd="20dp"
+    android:paddingBottom="12dp">
 
+    <!-- Encabezado -->
     <LinearLayout
-        android:id="@+id/mainPanel"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="24dp">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="CESBA"
-            android:textColor="#F0B323"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="VoiceControl"
-            android:textColor="#FFFFFF"
-            android:textSize="32sp"
-            android:textStyle="bold"
-            android:layout_marginTop="8dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Asistente controlado por voz"
-            android:textColor="#FFFFFF"
-            android:textSize="15sp" />
-
-        <TextView
-            android:id="@+id/txtEstado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Estado: iniciando..."
-            android:textColor="#F0B323"
-            android:textSize="18sp"
-            android:layout_marginTop="30dp" />
-
-        <Button
-            android:id="@+id/btnEscuchar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ESCUCHAR COMANDO"
-            android:layout_marginTop="15dp" />
-
-        <Button
-            android:id="@+id/btnCancelar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="CANCELAR" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TEXTO RECONOCIDO"
-            android:textColor="#F0B323"
-            android:textStyle="bold"
-            android:layout_marginTop="30dp" />
-
-        <TextView
-            android:id="@+id/txtReconocido"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Esperando instrucciones..."
-            android:textColor="#FFFFFF"
-            android:textSize="18sp"
-            android:padding="10dp" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="RESPUESTA DEL ASISTENTE"
-            android:textColor="#F0B323"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp" />
-
-        <TextView
-            android:id="@+id/txtRespuesta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sin respuesta."
-            android:textColor="#FFFFFF"
-            android:textSize="17sp"
-            android:padding="10dp" />
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/panelCalculadora"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="12dp"
-            android:layout_marginTop="15dp"
-            android:background="#314B91"
-            android:visibility="gone">
+            android:layout_weight="1"
+            android:orientation="vertical">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CALCULADORA"
-                android:textColor="#FFFFFF"
+                android:letterSpacing="0.3"
+                android:text="CESBA"
+                android:textColor="@color/gold"
+                android:textSize="13sp"
                 android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/numA"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:hint="Primer número"
-                android:inputType="numberDecimal|numberSigned" />
-
-            <EditText
-                android:id="@+id/numB"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Segundo número"
-                android:inputType="numberDecimal|numberSigned" />
-
-            <Button
-                android:id="@+id/btnSumar"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="SUMAR" />
-
-            <Button
-                android:id="@+id/btnCerrarCalc"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="CERRAR CALCULADORA" />
-
+                android:text="VoiceControl"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <TextView
-            android:layout_width="match_parent"
+            android:id="@+id/btnLimpiar"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Presiona Escuchar y pronuncia una instrucción. El reconocimiento puede requerir Internet."
-            android:textColor="#FFFFFF"
-            android:textSize="13sp"
-            android:layout_marginTop="30dp" />
-
+            android:background="@drawable/bg_chip"
+            android:paddingStart="14dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="14dp"
+            android:paddingBottom="8dp"
+            android:text="@string/btn_limpiar"
+            android:textColor="@color/gold"
+            android:textSize="12sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
-</ScrollView>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.75"
+        android:text="@string/tagline"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
+
+    <!-- Estado -->
+    <TextView
+        android:id="@+id/txtEstado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_pill"
+        android:paddingStart="18dp"
+        android:paddingTop="7dp"
+        android:paddingEnd="18dp"
+        android:paddingBottom="7dp"
+        android:text="@string/estado_inicial"
+        android:textColor="@color/gold"
+        android:textSize="14sp"
+        android:textStyle="bold" />
+
+    <!-- Boton de microfono con anillo animado -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_marginTop="6dp">
+
+        <View
+            android:id="@+id/viewRing"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_gravity="center"
+            android:alpha="0.3"
+            android:background="@drawable/bg_ring" />
+
+        <FrameLayout
+            android:id="@+id/btnMic"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bg_mic"
+            android:clickable="true"
+            android:elevation="12dp"
+            android:focusable="true">
+
+            <ImageView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:layout_gravity="center"
+                android:contentDescription="Micrófono"
+                android:src="@drawable/ic_mic" />
+        </FrameLayout>
+    </FrameLayout>
+
+    <!-- Onda de voz -->
+    <com.cesba.voicecontrol.WaveView
+        android:id="@+id/waveView"
+        android:layout_width="match_parent"
+        android:layout_height="48dp" />
+
+    <!-- Texto parcial en vivo -->
+    <TextView
+        android:id="@+id/txtParcial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minHeight="28dp"
+        android:textColor="@color/gold"
+        android:textSize="15sp"
+        android:textStyle="italic" />
+
+    <!-- Conversacion -->
+    <ScrollView
+        android:id="@+id/scrollChat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/chat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <!-- Calculadora -->
+    <LinearLayout
+        android:id="@+id/panelCalculadora"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_card"
+        android:orientation="vertical"
+        android:padding="14dp"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:letterSpacing="0.2"
+            android:text="@string/calc_titulo"
+            android:textColor="@color/gold"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/numA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_input"
+            android:hint="@string/calc_hint_a"
+            android:inputType="numberDecimal|numberSigned"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:textColorHint="#80FFFFFF" />
+
+        <EditText
+            android:id="@+id/numB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/bg_input"
+            android:hint="@string/calc_hint_b"
+            android:inputType="numberDecimal|numberSigned"
+            android:padding="12dp"
+            android:textColor="@color/white"
+            android:textColorHint="#80FFFFFF" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSumar"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button"
+                android:text="+"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnRestar"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button"
+                android:text="−"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnMultiplicar"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_marginEnd="6dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button"
+                android:text="×"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/btnDividir"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_button"
+                android:text="÷"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnCerrarCalc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp"
+            android:text="@string/calc_cerrar"
+            android:textColor="@color/gold"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- Comandos sugeridos -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/chips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+    </HorizontalScrollView>
+
+</LinearLayout>
